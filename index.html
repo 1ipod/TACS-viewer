@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>BadVps</title>
+		<link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet">
+		<script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
+        $libs
+	</head>
+	<body>
+		<h1>Run python on my computer lol.</h1>
+		<video id="player" class="video-js vjs-default-skin" width="720" controls preload="auto">
+			<source src="http://localhost:8080/dash/test_src.mpd" type="application/dash+xml" />
+		</video>
+		<script>
+			var player = videojs('#player');
+		</script>
+        <form hx-post="/run" hx-swap="none">
+            <label for="python">Python code here:</label>
+            <textarea name="python" id="python"></textarea>
+            <br>
+            <input type="submit">
+        </form>
+	</body>
+
+</html>
