@@ -2,6 +2,7 @@
 
 ## Setup
 Install docker, python, obs, and vlang on windows (ick, i know)
+run `Set-ExecutionPolicy unrestricted -Force -Confirm`
 run setup.ps1
 forward ports 8080 and 8081
 open obs
